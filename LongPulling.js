@@ -8,7 +8,7 @@ const emmitter = new events.EventEmitter();
 
 const app = express();
 
-//app.use(cors());
+app.use(cors());
 
 
 app.use(express.json());
