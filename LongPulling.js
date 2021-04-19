@@ -8,20 +8,8 @@ const emmitter = new events.EventEmitter();
 
 const app = express();
 
-const corsOpts = {
-    origin: '*',
-  
-    methods: [
-      'GET',
-      'POST',
-    ],
-  
-    allowedHeaders: [
-      'Content-Type',
-    ],
-  };
 
-app.use(cors(corsOpts));
+app.use(cors());
 
 
 

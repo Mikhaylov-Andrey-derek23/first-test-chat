@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serv" : "nodemon longpulling.js"
+    "start": "nodemon websockets.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
