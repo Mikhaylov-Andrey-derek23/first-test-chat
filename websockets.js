@@ -7,9 +7,22 @@ const wsServer = new ws.Server({
 wsServer.on('connection', function connection(ws){
     ws.on('message', function(message){
         message = JSON.parse(message);
-        console.log(message);
+        switch(message.event){
+            case "conection":
+                broadcastMessage(message)
+            break;
+            case "message":
+                broadcastMessage(message)
+                break;
+        }
     })
 })
+
+function broadcastMessage(message) {
+    wsServer.clients.forEach(client => {
+        client.send(JSON.stringify(message))
+    })
+}
 
 
 
